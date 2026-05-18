@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant Chains - Handmade Chain Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">✨ Elegant Chains</div>
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#products" class="nav-link">Products</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Handmade Elegance</h1>
+            <p>Exquisite handcrafted chains for every occasion</p>
+            <button class="cta-button" onclick="scrollToSection('products')">Explore Collection</button>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">Our Collections</h2>
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-icon">⛓️</div>
+                    <h3>Silver Chains</h3>
+                    <p>Elegant pure silver chains with intricate designs</p>
+                    <div class="product-price">₹2,499 - ₹4,999</div>
+                    <button class="order-btn" onclick="orderOnWhatsApp('Silver Chains')">Order Now</button>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-icon">✨</div>
+                    <h3>Gold-Plated Chains</h3>
+                    <p>Stunning gold-plated designs that shine all day</p>
+                    <div class="product-price">₹1,999 - ₹3,999</div>
+                    <button class="order-btn" onclick="orderOnWhatsApp('Gold-Plated Chains')">Order Now</button>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-icon">💎</div>
+                    <h3>Gemstone Chains</h3>
+                    <p>Beautiful chains adorned with precious gemstones</p>
+                    <div class="product-price">₹3,499 - ₹7,999</div>
+                    <button class="order-btn" onclick="orderOnWhatsApp('Gemstone Chains')">Order Now</button>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-icon">🌟</div>
+                    <h3>Pearl Chains</h3>
+                    <p>Delicate pearl chains perfect for elegant occasions</p>
+                    <div class="product-price">₹2,999 - ₹5,999</div>
+                    <button class="order-btn" onclick="orderOnWhatsApp('Pearl Chains')">Order Now</button>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <div class="product-icon">🔗</div>
+                    <h3>Statement Chains</h3>
+                    <p>Bold and stylish statement pieces for fashion forward looks</p>
+                    <div class="product-price">₹1,499 - ₹3,499</div>
+                    <button class="order-btn" onclick="orderOnWhatsApp('Statement Chains')">Order Now</button>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <div class="product-icon">👑</div>
+                    <h3>Luxury Collection</h3>
+                    <p>Premium handcrafted chains for special moments</p>
+                    <div class="product-price">₹5,999 - ₹14,999</div>
+                    <button class="order-btn" onclick="orderOnWhatsApp('Luxury Collection')">Order Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Why Choose Us?</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Handcrafted Quality</h3>
+                    <p>Each piece is carefully handmade with attention to detail</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">💚</div>
+                    <h3>Premium Materials</h3>
+                    <p>Only the finest materials are used in our chains</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Fast Delivery</h3>
+                    <p>Quick and reliable shipping to your doorstep</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">❤️</div>
+                    <h3>Customer Care</h3>
+                    <p>Dedicated support for all your queries and concerns</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-content">
+                <form class="contact-form" onsubmit="handleContactForm(event)">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Tell us about your query..." rows="5" required></textarea>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+                <div class="contact-info">
+                    <h3>Contact Details</h3>
+                    <p>📞 WhatsApp: <a href="https://wa.me/919876543210" target="_blank">+91-9876543210</a></p>
+                    <p>📧 Email: <a href="mailto:info@elegantchains.com">info@elegantchains.com</a></p>
+                    <p>🌐 Follow us on:</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">📕</a>
+                        <a href="#" class="social-icon">📷</a>
+                        <a href="#" class="social-icon">🐦</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Elegant Chains. All rights reserved. | Handmade with ❤️</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
