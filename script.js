@@ -34,6 +34,41 @@ function scrollToSection(sectionId) {
     }
 }
 
+// Category Management
+function openCategory(categoryName) {
+    // Hide all product sections
+    document.querySelectorAll('.product-section').forEach(section => {
+        section.style.display = 'none';
+    });
+    
+    // Show selected category
+    const categorySection = document.getElementById(categoryName);
+    if (categorySection) {
+        categorySection.style.display = 'block';
+    }
+    
+    // Scroll to products section
+    const productsDetail = document.getElementById('products-detail');
+    if (productsDetail) {
+        setTimeout(() => {
+            productsDetail.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+    }
+}
+
+function closeCategory() {
+    // Hide all product sections
+    document.querySelectorAll('.product-section').forEach(section => {
+        section.style.display = 'none';
+    });
+    
+    // Scroll back to categories
+    const categoriesSection = document.getElementById('categories');
+    if (categoriesSection) {
+        categoriesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
