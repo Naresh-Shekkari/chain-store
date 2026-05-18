@@ -14,7 +14,7 @@
                 <div class="logo">✨ Elegant Chains</div>
                 <ul class="nav-links">
                     <li><a href="#home" class="nav-link">Home</a></li>
-                    <li><a href="#products" class="nav-link">Products</a></li>
+                    <li><a href="#categories" class="nav-link">Shop</a></li>
                     <li><a href="#about" class="nav-link">About</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
@@ -26,68 +26,205 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Handmade Elegance</h1>
-            <p>Exquisite handcrafted chains for every occasion</p>
-            <button class="cta-button" onclick="scrollToSection('products')">Explore Collection</button>
+            <p>Exquisite handcrafted chains, clips, bracelets & more for every occasion</p>
+            <button class="cta-button" onclick="scrollToSection('categories')">Explore Now</button>
         </div>
     </section>
 
-    <!-- Products Section -->
-    <section id="products" class="products">
+    <!-- Categories Section -->
+    <section id="categories" class="categories">
         <div class="container">
             <h2 class="section-title">Our Collections</h2>
-            <div class="products-grid">
-                <!-- Product 1 -->
-                <div class="product-card">
-                    <div class="product-icon">⛓️</div>
-                    <h3>Silver Chains</h3>
-                    <p>Elegant pure silver chains with intricate designs</p>
-                    <div class="product-price">₹2,499 - ₹4,999</div>
-                    <button class="order-btn" onclick="orderOnWhatsApp('Silver Chains')">Order Now</button>
+            <div class="categories-grid">
+                <!-- Category 1: Chains -->
+                <div class="category-card" onclick="openCategory('chains')">
+                    <div class="category-icon">⛓️</div>
+                    <h3>Chains</h3>
+                    <p>Beautiful handcrafted chains in various designs</p>
+                    <span class="arrow">→</span>
                 </div>
 
-                <!-- Product 2 -->
-                <div class="product-card">
-                    <div class="product-icon">✨</div>
-                    <h3>Gold-Plated Chains</h3>
-                    <p>Stunning gold-plated designs that shine all day</p>
-                    <div class="product-price">₹1,999 - ₹3,999</div>
-                    <button class="order-btn" onclick="orderOnWhatsApp('Gold-Plated Chains')">Order Now</button>
+                <!-- Category 2: Hair Clips -->
+                <div class="category-card" onclick="openCategory('hairclips')">
+                    <div class="category-icon">✨</div>
+                    <h3>Hair Clips</h3>
+                    <p>Elegant and stylish hair accessories</p>
+                    <span class="arrow">→</span>
                 </div>
 
-                <!-- Product 3 -->
-                <div class="product-card">
-                    <div class="product-icon">💎</div>
-                    <h3>Gemstone Chains</h3>
-                    <p>Beautiful chains adorned with precious gemstones</p>
-                    <div class="product-price">₹3,499 - ₹7,999</div>
-                    <button class="order-btn" onclick="orderOnWhatsApp('Gemstone Chains')">Order Now</button>
+                <!-- Category 3: Bracelets -->
+                <div class="category-card" onclick="openCategory('bracelets')">
+                    <div class="category-icon">💎</div>
+                    <h3>Bracelets</h3>
+                    <p>Premium handmade bracelets for all wrists</p>
+                    <span class="arrow">→</span>
                 </div>
 
-                <!-- Product 4 -->
-                <div class="product-card">
-                    <div class="product-icon">🌟</div>
-                    <h3>Pearl Chains</h3>
-                    <p>Delicate pearl chains perfect for elegant occasions</p>
-                    <div class="product-price">₹2,999 - ₹5,999</div>
-                    <button class="order-btn" onclick="orderOnWhatsApp('Pearl Chains')">Order Now</button>
+                <!-- Category 4: Others -->
+                <div class="category-card" onclick="openCategory('others')">
+                    <div class="category-icon">🎁</div>
+                    <h3>Others</h3>
+                    <p>Unique handcrafted items & special pieces</p>
+                    <span class="arrow">→</span>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <!-- Product 5 -->
-                <div class="product-card">
-                    <div class="product-icon">🔗</div>
-                    <h3>Statement Chains</h3>
-                    <p>Bold and stylish statement pieces for fashion forward looks</p>
-                    <div class="product-price">₹1,499 - ₹3,499</div>
-                    <button class="order-btn" onclick="orderOnWhatsApp('Statement Chains')">Order Now</button>
+    <!-- Products Display Section -->
+    <section id="products-detail" class="products-detail">
+        <div class="container">
+            <button class="close-btn" onclick="closeCategory()">← Back to Categories</button>
+            
+            <!-- Chains Products -->
+            <div id="chains" class="product-section" style="display:none;">
+                <h2 class="category-title">Chains Collection</h2>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-icon">⛓️</div>
+                        <h3>Silver Chains</h3>
+                        <p>Elegant pure silver chains with intricate designs</p>
+                        <div class="product-price">₹2,499 - ₹4,999</div>
+                        <button class="order-btn" onclick="orderOnWhatsApp('Silver Chains')">Order Now</button>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-icon">✨</div>
+                        <h3>Gold-Plated Chains</h3>
+                        <p>Stunning gold-plated designs that shine all day</p>
+                        <div class="product-price">₹1,999 - ₹3,999</div>
+                        <button class="order-btn" onclick="orderOnWhatsApp('Gold-Plated Chains')">Order Now</button>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-icon">🌟</div>
+                        <h3>Designer Chains</h3>
+                        <p>Unique designer chain patterns with modern flair</p>
+                        <div class="product-price">₹3,499 - ₹6,999</div>
+                        <button class="order-btn" onclick="orderOnWhatsApp('Designer Chains')">Order Now</button>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-icon">👑</div>
+                        <h3>Premium Chains</h3>
+                        <p>Luxury chains for special occasions</p>
+                        <div class="product-price">₹5,999 - ₹14,999</div>
+                        <button class="order-btn" onclick="orderOnWhatsApp('Premium Chains')">Order Now</button>
+                    </div>
                 </div>
+            </div>
 
-                <!-- Product 6 -->
-                <div class="product-card">
-                    <div class="product-icon">👑</div>
-                    <h3>Luxury Collection</h3>
-                    <p>Premium handcrafted chains for special moments</p>
-                    <div class="product-price">₹5,999 - ₹14,999</div>
-                    <button class="order-btn" onclick="orderOnWhatsApp('Luxury Collection')">Order Now</button>
+            <!-- Hair Clips Products -->
+            <div id="hairclips" class="product-section" style="display:none;">
+                <h2 class="category-title">Hair Clips Collection</h2>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-icon">🎀</div>
+                        <h3>Pearl Hair Clips</h3>
+                        <p>Elegant pearl-adorned hair clips</p>
+                        <div class="product-price">₹599 - ₹1,299</div>
+                        <button class="order-btn" onclick="orderOnWhatsApp('Pearl Hair Clips')">Order Now</button>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-icon">✨</div>
+                        <h3>Metallic Clips</h3>
+                        <p>Shiny metallic hair clips for everyday wear</p>
+                        <div class="product-price">₹399 - ₹899</div>
+                        <button class="order-btn" onclick="orderOnWhatsApp('Metallic Hair Clips')">Order Now</button>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-icon">💎</div>
+                        <h3>Gemstone Clips</h3>
+                        <p>Beautiful gemstone-studded hair accessories</p>
+                        <div class="product-price">₹799 - ₹1,999</div>
+                        <button class="order-btn" onclick="orderOnWhatsApp('Gemstone Hair Clips')">Order Now</button>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-icon">🌸</div>
+                        <h3>Decorative Clips</h3>
+                        <p>Colorful and decorative hair clip designs</p>
+                        <div class="product-price">₹499 - ₹1,199</div>
+                        <button class="order-btn" onclick="orderOnWhatsApp('Decorative Hair Clips')">Order Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bracelets Products -->
+            <div id="bracelets" class="product-section" style="display:none;">
+                <h2 class="category-title">Bracelets Collection</h2>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-icon">💫</div>
+                        <h3>Silver Bracelets</h3>
+                        <p>Elegant silver bangles and bracelets</p>
+                        <div class="product-price">₹1,499 - ₹3,499</div>
+                        <button class="order-btn" onclick="orderOnWhatsApp('Silver Bracelets')">Order Now</button>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-icon">✨</div>
+                        <h3>Gold Bracelets</h3>
+                        <p>Stunning gold-plated bracelet designs</p>
+                        <div class="product-price">₹999 - ₹2,999</div>
+                        <button class="order-btn" onclick="orderOnWhatsApp('Gold Bracelets')">Order Now</button>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-icon">💎</div>
+                        <h3>Gemstone Bracelets</h3>
+                        <p>Bracelets adorned with precious gemstones</p>
+                        <div class="product-price">₹1,999 - ₹4,999</div>
+                        <button class="order-btn" onclick="orderOnWhatsApp('Gemstone Bracelets')">Order Now</button>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-icon">🌟</div>
+                        <h3>Statement Bracelets</h3>
+                        <p>Bold and trendy statement bracelet styles</p>
+                        <div class="product-price">₹799 - ₹2,299</div>
+                        <button class="order-btn" onclick="orderOnWhatsApp('Statement Bracelets')">Order Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Others Products -->
+            <div id="others" class="product-section" style="display:none;">
+                <h2 class="category-title">Other Collections</h2>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-icon">📿</div>
+                        <h3>Beaded Jewelry</h3>
+                        <p>Beautiful beaded handcrafted jewelry pieces</p>
+                        <div class="product-price">₹599 - ₹1,999</div>
+                        <button class="order-btn" onclick="orderOnWhatsApp('Beaded Jewelry')">Order Now</button>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-icon">🔗</div>
+                        <h3>Link Accessories</h3>
+                        <p>Unique link-based jewelry accessories</p>
+                        <div class="product-price">₹799 - ₹2,499</div>
+                        <button class="order-btn" onclick="orderOnWhatsApp('Link Accessories')">Order Now</button>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-icon">✨</div>
+                        <h3>Combo Sets</h3>
+                        <p>Complete matching jewelry combo sets</p>
+                        <div class="product-price">₹2,999 - ₹5,999</div>
+                        <button class="order-btn" onclick="orderOnWhatsApp('Combo Sets')">Order Now</button>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-icon">🎁</div>
+                        <h3>Custom Orders</h3>
+                        <p>Personalized handmade jewelry as per your design</p>
+                        <div class="product-price">Custom pricing</div>
+                        <button class="order-btn" onclick="orderOnWhatsApp('Custom Order Inquiry')">Inquire Now</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -106,7 +243,7 @@
                 <div class="feature">
                     <div class="feature-icon">💚</div>
                     <h3>Premium Materials</h3>
-                    <p>Only the finest materials are used in our chains</p>
+                    <p>Only the finest materials are used in our creations</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">⚡</div>
